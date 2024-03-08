@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="firstname">Hello</h1>
+    <div id="lastname">Masai</div>
+    <p id="fullname">School</p>
+    <hr/>
+    <button id="fn">FIRSTNAME</button>
+    <button id="sn">LASTNAME</button>
+    <button id="fun">FULLNAME</button>
+    <button id="dn">DEFAULTNAME</button>
+    
+
+    
+
+</body>
+</html>
+
+<script>
+    let a=document.querySelector("#fn").addEventListener("click",fun1)
+    let b=document.querySelector("#sn").addEventListener("click",fun2)
+    let c=document.querySelector("#fun").addEventListener("click",fun3)
+    let d=document.querySelector("#dn").addEventListener("click",fun4)
+    function fun1(){
+        document.querySelector("#firstname").innerText="rajkumar"
+    }
+    function fun2(){
+        document.querySelector("#lastname").innerText="garai"
+    }
+    function fun3(){
+        document.querySelector("#fullname").innerText="rajkumar garai"
+    }
+    function fun4(){
+        document.querySelector("#firstname").innerText=""
+        document.querySelector("#lastname").innerText=""
+        document.querySelector("#fullname").innerText=""
+    }
+   
+</script>

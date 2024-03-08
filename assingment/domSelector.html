@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <h5>First H5</h5>
+    <h5>Second H5</h5>
+    <h5>Third H5</h5>
+    <div class="green">First DIV</div>
+    <div class="red">Second DIV</div>
+    <div class="blue">Third DIV</div>
+    <p class="green">First P</p>
+    <p class="red">Second P</p>
+    <p class="blue">Third P</p>
+    <button onclick="changeH1()" id="ch1">Change H1</button>
+    <button onclick="changeH3()" id="ch3">Change H3</button>
+    <button onclick="changeH5()" id="ch5">Change H5</button>
+    <button onclick="changeGreen()" id="cg">Change Green</button>
+    <button onclick="changeRed()" id="cr">Change Red</button>
+    <button onclick="changeBlue()" id="cb">Change Blue</button>
+
+</body>
+</html>
+<script>
+  function changeH1(){
+    document.querySelector("h1").style.color="red"
+    // for(let i=0;i<length(a);i++){
+    //     a[i].style.color=
+    // }
+  }
+  function changeH3(){
+   let a= document.querySelectorAll("h3")
+    for(let i=0;i<a.length;i++){
+        a[i].style.color="green"
+    }
+  }
+  function changeH5(){
+   let b= document.querySelectorAll("h5")
+    for(let i=0;i<b.length;i++){
+        b[i].style.color="blue"
+    }
+  }
+  function changeGreen(){
+   let b= document.querySelectorAll(".green")
+    for(let i=0;i<b.length;i++){
+        b[i].style.color="green"
+    }
+  }
+  function changeRed(){
+   let b= document.querySelectorAll(".red")
+    for(let i=0;i<b.length;i++){
+        b[i].style.color="red"
+    }
+  }
+  function changeBlue(){
+   let b= document.querySelectorAll(".blue")
+    for(let i=0;i<b.length;i++){
+        b[i].style.color="blue"
+    }
+  }
+</script>

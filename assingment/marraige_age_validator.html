@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="gender">
+        <option value="">Select gender</option>
+        <option value="Female">FEMALE</option>
+        <option value="Male">MALE</option>
+    </select>
+    <input id="age" type="number" placeholder="enter your age"/>
+    <button id="sub">Submit</button>
+</body>
+</html>
+<script>
+document.querySelector("#sub").addEventListener("click",fun)
+function fun(){
+     if(document.querySelector("#gender").value=="Male"){
+        if(document.querySelector("#age").value>=21){
+            alert("you are eligible for marriage")
+        }
+        else{
+            alert("you are not eligible for marriage")
+        }
+     }
+     if(document.querySelector("#gender").value=="Female"){
+        if(document.querySelector("#age").value>=18){
+            alert("you are eligible for marriage")
+        }
+        else{
+            alert("you are not eligible for marriage")
+        }
+     }
+}
+</script>
