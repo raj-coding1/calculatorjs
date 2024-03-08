@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="base" type="text" placeholder="enter the basse"/>
+    <input id="power" type="text" placeholder="enter the power"/>
+    <button>Click here to know the Exponant</button>
+    <p id="ans"></p>
+</body>
+</html>
+<script>
+    document.querySelector("button").addEventListener("click",exponant)
+    function exponant(){
+        let a=document.querySelector("#base").value
+        let b=document.querySelector("#power").value
+        let result=1
+        for(let i=0;i<b;i++){
+            result*=a
+        }
+        document.querySelector("#ans").innerText=result
+
+    }
+
+</script>
