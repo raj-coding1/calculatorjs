@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="age" type="number" placeholder="Enter your age"/>
+    <button onclick="myfun()" id="like">Submit</button>
+    <h2 id="heading"></h2>
+</body>
+</html>
+
+<script>
+    //   document.getElementById("like").addEventListener("click",myfun)
+      function myfun(){
+        document.getElementById("like").style.backgroundColor="red"
+        if(document.querySelector("#age").value>18){
+            document.getElementById("heading").innerText="You can drive in India"
+        }
+        if(document.getElementById("age").value<18){
+            document.getElementById("heading").innerText="You can't drive in India"
+        }
+        if(document.getElementById("age").value=18){
+            document.getElementById("heading").innerText="You are just old enough to drive in India"
+            // console.log("You are just old enough to drive in India");
+        }
+
+       
+      }
+</script>

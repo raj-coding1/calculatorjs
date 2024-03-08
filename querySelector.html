@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5 id="heading">0</h5>
+    <button id="like">Like</button>
+    <button id="unlike">unlike</button>
+</body>
+</html>
+<script>
+    let a=document.querySelector("#like")
+    a.addEventListener("click",myfun)
+    document.querySelector("#unlike").addEventListener("click",fun2)
+    function myfun(){
+        document.querySelector("#like").style.backgroundColor="red"
+        document.querySelector("#heading").innerText++
+        console.log(event.target.innerText);
+        // console.log(b);
+    }
+    function fun2(){
+      document.querySelector("#heading").innerText--
+    }
+</script>

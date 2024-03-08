@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            height: 450px;
+            width: 300px;
+            border: 1px solid black;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(5,1fr);
+            gap: 20px
+        }
+        #container>div{
+            padding: 10px;
+            border: 1px solid black;
+
+        }
+        #container>div:nth-child(1){
+            grid-area: 1/1/2/5;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="kumar"></div>
+        <div class="raj">1</div>
+        <div class="raj">2</div><div class="raj">3</div><div class="raj">+</div><div class="raj">4</div><div class="raj">5</div>
+        <div class="raj">6</div><div class="raj">-</div><div class="raj">7</div><div class="raj">8</div><div class="raj">9</div>
+        <div class="raj">/</div><div class="raj">0</div><div class="raj">C</div><div class="raj">=</div><div class="raj">*</div>
+        
+        
+    </div>
+</body>
+</html>
+
+<script>
+    let a =document.querySelectorAll(".raj")
+    for(let i=0;i<a.length;i++){
+        a[i].addEventListener("click",myfun)
+    }
+    // let y=0
+   
+    function myfun(){
+       let target=event.target.innerText
+       switch (target){
+        case "C":
+            document.querySelector(".kumar").innerText=""
+            break;
+        case "=":
+        document.querySelector(".kumar").innerText=eval(document.querySelector(".kumar").innerText)    
+        break;
+        default:
+        document.querySelector(".kumar").innerText=document.querySelector(".kumar").innerText+target
+       }
+
+
+   
+    }
+ 
+</script>
