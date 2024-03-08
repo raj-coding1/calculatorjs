@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="name" id="name" placeholder="enter your name"/>
+    <select name="" id="gender">
+        <option value="">Select Gender</option>
+        <option value="Male">MALE</option>
+        <option value="Female">FEMALE</option>
+    </select>
+    <input type="text" name="email" id="email" placeholder="enter yout email"/>
+    <input type="text" name="mobile" id="mobile" placeholder="enter your mobile"/>
+    <button id="Name">NAME</button>
+    <button id="Gender">GENDER</button>
+    <button id="Email">EMAIL</button>
+    <button id="Mobile">MOBILE</button>
+    <h1 id="nam"></h1>
+    <h1 id="gen"></h1>
+    <h1 id="mail"></h1>
+    <h1 id="mob"></h1>
+</body>
+</html>
+
+<script>
+    let a=document.querySelector("#Name")
+    a.addEventListener("click",fum1)
+    let b=document.querySelector("#Gender")
+    b.addEventListener("click",fum2)
+    let c=document.querySelector("#Email")
+    c.addEventListener("click",fum3)
+    let d=document.querySelector("#Mobile")
+    d.addEventListener("click",fum4)
+    function fum1(){
+        document.querySelector("#Name").style.backgroundColor="red"
+        document.querySelector("#nam").innerText=document.querySelector("#name").value
+    }
+    function fum2(){
+        document.querySelector("#Gender").style.backgroundColor="red"
+        document.querySelector("#gen").innerText=document.querySelector("#gender").value
+    }
+    function fum3(){
+        document.querySelector("#Email").style.backgroundColor="red"
+        document.querySelector("#mail").innerText=document.querySelector("#email").value
+    }
+    function fum4(){
+        document.querySelector("#Mobile").style.backgroundColor="red"
+        document.querySelector("#mob").innerText=document.querySelector("#mobile").value
+    }
+</script>
