@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+   let inner_text=["Primary","Secondary","Success","Danger","Warning","Info","Light","Dark","Link"]
+   let bg_clr=["blue","black","green","red","yellow","green","white","black","white"]
+   let clr=["white","white","white","white","black","white","black","white","blue"]
+
+   for(let i=0;i<9;i++){
+    let a= document.createElement("button")
+    a.innerText=inner_text[i]
+    a.style.backgroundColor=bg_clr[i]
+    a.style.color=clr[i]
+    document.querySelector("body").append(a)
+   }
+    
+
+</script>

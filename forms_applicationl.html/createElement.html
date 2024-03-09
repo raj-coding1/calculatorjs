@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .heading{
+            color: red;
+        } */
+    </style>
+</head>
+<body>
+   
+</body>
+</html>
+<script>
+    // in this createElement section we will learn how to make html element by javascript only
+//    document.querySelector("#formTag").addEventListener("submit",myfun)
+//    function myfun(){
+//     event.preventDefault()                                                                                                                            
+//         document.querySelector("#hit").style.backgroundColor="red"
+//         document.querySelector("p").innerText=document.querySelector("#name").value
+        // FORms is refreshing 
+
+//    }
+let a=document.createElement("h1")
+a.innerText="i am heading1"
+a.setAttribute("class","heading")
+// document.querySelector(".heading").style.color="red"
+a.style.color="red"
+document.querySelector("body").append(a)
+
+</script>

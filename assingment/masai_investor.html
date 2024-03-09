@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(2,440px);
+
+            gap: 10px;
+            text-align: center;
+        }
+        #container>div{
+            border: 1px solid black;
+        }
+        h2{
+            /* margin-bottom: 0%; 
+            padding-bottom: 0%; */
+            margin: 0%;
+            padding: 0%;
+        }
+        p{
+            /* margin-bottom: 0%; 
+            padding-bottom: 0%; */
+            margin: 0%;
+            padding: 0%;
+        }
+        .person{
+            height: 300px;
+            width: 100%;
+            
+             
+        }
+        .logo{
+            height: 100px;
+            width: 120px;
+             /* margin-bottom: 0%; 
+             padding-top: 0%;  */
+             /* margin-top: 10%; */
+            /* margin-bottom: 10px; */
+            margin: 0%;
+            padding: 0%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+  let div_obj=[
+    {"image":"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg","h5tag":"Vijay Shekhar Sharma","ptag":"Founder & CEO","logo":"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+    {"image":"https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png","h5tag":"Kunal Shah","ptag":"Founder","logo":"https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png"},
+    {"image":"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg","h5tag":"Vijay Shekhar Sharma","ptag":"Founder & CEO","logo":"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+    {"image":"https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png","h5tag":"Kunal Shah","ptag":"Founder","logo":"https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png"},
+    // {"image":"","h5tag":"","ptag":"","logo":""},
+    {"image":"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg","h5tag":"Vijay Shekhar Sharma","ptag":"Founder & CEO","logo":"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+    {"image":"https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png","h5tag":"Kunal Shah","ptag":"Founder","logo":"https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png"},
+    // {"image":"","h5tag":"","ptag":"","logo":""},
+    {"image":"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg","h5tag":"Vijay Shekhar Sharma","ptag":"Founder & CEO","logo":"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+    {"image":"https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png","h5tag":"Kunal Shah","ptag":"Founder","logo":"https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png"},
+    // {"image":"","h5tag":"","ptag":"","logo":""},
+    // {"image":"","h5tag":"","ptag":"","logo":""},
+    // {"image":"","h5tag":"","ptag":"","logo":""},
+    // {"image":"","h5tag":"","ptag":"","logo":""},
+    // {"image":"","h5tag":"","ptag":"","logo":""},
+    // {"image":"","h5tag":"","ptag":"","logo":""},
+    // {"image":"","h5tag":"","ptag":"","logo":""},
+    // {"image":"","h5tag":"","ptag":"","logo":""},
+  
+
+  ]
+  
+  div_obj.map(function(ele,index,arr){
+    let x=document.createElement("div")
+    let i=document.createElement("img")
+    i.setAttribute("class","person")
+    i.setAttribute("src",ele.image)
+    let h=document.createElement("h2")
+    h.innerText=ele.h5tag
+    let para=document.createElement("p")
+    para.innerText=ele.ptag
+    let logo_img=document.createElement("img")
+    logo_img.setAttribute("src",ele.logo)
+    logo_img.setAttribute("class","logo")
+    x.append(i,h,para,logo_img)
+
+    document.querySelector("#container").append(x)
+  })
+
+
+
+</script>

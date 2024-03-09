@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let button_obj=[
+        {"text_content":"Primary","clr":"white","bg_clr":"blue"},
+        {"text_content":"Secondary","clr":"white","bg_clr":"black"},
+        {"text_content":"Success","clr":"white","bg_clr":"green"},
+        {"text_content":"Danger","clr":"white","bg_clr":"red"},
+        {"text_content":"Warning","clr":"black","bg_clr":"yellow"},
+        {"text_content":"Info","clr":"white","bg_clr":"teal"},
+        {"text_content":"light","clr":"black","bg_clr":"white"},
+        {"text_content":"Dark","clr":"white","bg_clr":"black"},
+        {"text_content":"Link","clr":"blue","bg_clr":"white"},
+        
+    ]
+    for(let i=0;i<button_obj.length;i++){
+        let a=document.createElement("button")
+        a.innerText=button_obj[i].text_content
+        a.style.color=button_obj[i].clr
+        a.style.backgroundColor=button_obj[i].bg_clr
+        document.querySelector("body").append(a)
+    }
+</script>
