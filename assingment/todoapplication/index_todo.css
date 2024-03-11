@@ -1,0 +1,11 @@
+#sub-container{
+   height: 400px;
+   width: 400px;
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   grid-template-rows: repeat(5,1fr);
+   border: 1px solid black;
+}
+#sub-container>div{
+    border: 1px solid black;
+}
