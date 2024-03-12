@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action=""></form>
+</body>
+</html>
+<script>
+//    let c= document.createElement("form")
+//     document.querySelector("body").append(c)
+    let a=document.createElement("input")
+    a.setAttribute("id","product")
+    a.setAttribute("placeholder","enter product name")
+    let b=document.createElement("lnput")
+    b.setAttribute("id","quantity")
+    b.setAttribute("placeholder","enter quantity")
+    let c=document.createElement("select")
+    let d=document.createElement("option")
+    d.innerText="select priority"
+    let e=document.createElement("option")
+    e.innerText="high"
+    e.setAttribute("value","high")
+    let f=document.createElement("option")
+    f.innerText="moderate"
+    f.setAttribute("value","moderate")
+    let g=document.createElement("option")
+    g.innerText="low"
+    
+    g.setAttribute("value","low")
+
+    c.append(d,e,f,g)
+    let h=document.createElement("input")
+    let i=document.createElement("input")
+    i.setAttribute("value","submit")
+    i.setAttribute("type","submit")
+    let x=document.createElement("h3")
+    let y=document.createElement("p")
+    let z=document.createElement("div")
+    h.setAttribute("placeholder","enter quantity")
+    let arr=[]
+   
+    
+
+        document.querySelector("form").append(a,b,c,h,i,x,y,z)
+        document.querySelector("form").addEventListener("submit",fun)
+        function fun(){
+            event.preventDefault()
+            let obj={
+                "x.innerText":"a.value",
+                 "y.innerText":"c.value",
+                "z.innerText":"h.value",
+            }
+            arr.push(obj)
+            console.log(arr);
+
+        }
+
+
+
+</script>
