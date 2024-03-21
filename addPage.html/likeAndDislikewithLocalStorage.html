@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <button id="love">like</button>
+    <button id="hate">dislike</button>
+</body>
+</html>
+<script>
+    document.querySelector("h1").innerText=localStorage.getItem("total")
+
+    if(localStorage.getItem("total")==null){
+        counter=0
+        localStorage.setItem("total",counter)
+    }else{
+        counter=localStorage.getItem("total")
+    }
+    document.querySelector("#love").addEventListener("click",increament)
+    function increament(){
+        counter++
+        localStorage.setItem("total",counter)
+        document.querySelector("h1").innerText=counter
+
+    }
+    document.querySelector("#hate").addEventListener("click",decreament)
+    function decreament(){
+        if(counter<=0){
+            document.querySelector("h1").innerText=Number(0)
+        }else{
+            counter--
+        localStorage.setItem("total",counter)
+        document.querySelector("h1").innerText=counter
+        }
+        
+    }
+
+</script>

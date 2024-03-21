@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: flex;
+            height: 500px;
+            width: 500px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+ <div id="container">
+   
+ </div>
+
+</body>
+</html>
+<script>
+    let forme=document.createElement("form")
+document.querySelector("#container").append(forme)
+let input_1=document.createElement("input")
+input_1.setAttribute("placeholder","enter job_name")
+let input_2=document.createElement("input")
+input_2.setAttribute("placeholder","enter time_duration")
+let select_1=document.createElement("select")
+let option_1=document.createElement("option")
+option_1.innerText="high"
+option_1.setAttribute("value","high")
+let option_2=document.createElement("option")
+option_2.innerText="moderate"
+option_2.setAttribute("value","moderate")
+let option_3=document.createElement("option")
+option_3.innerText="low"
+option_3.setAttribute("value","low")
+document.querySelector("select").append(option_1,option_2,option_3)
+
+
+
+document.querySelector("form").append(input_1,input_2,select_1)
+</script>

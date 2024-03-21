@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #contaienr{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,1fr);
+            border: 1px solid black;
+            gap: 10px;
+            height: 500px;
+            width: 600px;
+        }
+        #container>div{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+    <p></p>
+</body>
+</html>
+<script>
+    let a=document.querySelectorAll("#container>div")
+    for(let i=0;i<9;i++){
+        a[i].addEventListener("click",fun)
+    }
+    function fun(){
+        // console.log(event.target);
+        let x=document.querySelector("p")
+        x.innerText=x.innerText+event.target.innerText
+    }
+</script>

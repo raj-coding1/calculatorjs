@@ -1,0 +1,33 @@
+<!-- in local storage there are only three operation: 
+1. localStorage.setItem()
+2. localStorage.getItem()
+3. localStorage.removeItem()
+4.JSON.stringify()
+5.JSON.parse() -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// let arr=["rajkumar",20,"male"]
+// let d=localStorage.setItem("array",JSON.stringify(arr))
+// console.log(d);
+// let x=localStorage.getItem(JSON.parse(d))
+// console.log(typeof(x));
+x=10
+localStorage.setItem("value",x)
+a=localStorage.getItem("value")
+console.log(a);
+console.log(typeof(a));
+console.log(typeof(Number(a)))
+
+console.log(typeof(x));
+  
+</script>

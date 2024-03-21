@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>admin data</h1>
+    <input type="text" placeholder="enter image url" id="first">
+    <input type="text" placeholder="enter product name" id="second">
+    <input type="text" placeholder="enter save price" id="third">
+    <input type="text" placeholder="enter price" id="fourth">
+    <button>submit</button>
+</body>
+</html>
+<script>
+    document.querySelector("button").addEventListener("click",fun)
+    let arr=[]
+    function fun(){
+        let a=document.querySelector("#first")
+        let b=document.querySelector("#second")
+        let c=document.querySelector("#third")
+        let d=document.querySelector("#fourth")
+        
+       let obj={
+        image:a.value,
+        name:b.value,
+        save_price:c.value,
+        price:d.value
+
+       }
+       arr.push(obj)
+       console.log(arr);
+    }
+</script>

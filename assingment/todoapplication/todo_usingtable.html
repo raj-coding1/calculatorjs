@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #container{
+        height: 350px;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        /* justify-content: space-between; */
+        border: 1px solid black;
+        margin-top: 10%;
+    }
+    #container>div{
+        height: 100%;
+        border: 1px solid black;
+        /* width: 40%; */
+        margin: auto;
+
+    }
+    #sc1{
+        width: 30%;
+    }
+    #sc2{
+        width: 50%;
+    }
+    h5{
+        margin-bottom: 0;
+        padding: 0;
+
+    }
+    input{
+        margin: 0;
+        padding: 0;
+        width: 99%;
+        height: 30px;
+    }
+    select{
+        width: 100%;
+        height: 30px;
+    }
+    #sub{
+        background-color: teal;
+        color: white;
+        width: 100%;
+        margin-top: 40px;
+        height: 40px;
+    }
+    table{
+        width: 100%;
+    }
+    </style>
+</head>
+<body>
+   <div id="container">
+    <div id="sc1">
+        <h5>item name</h5>
+        <input type="text" placeholder="enter item_name" id="input_1">
+        <h5>enter quantity</h5>
+        <input type="text" placeholder="enter quantity" id="input_2">
+        <h5>select priority</h5>
+        <select name="" id="select_1">
+            <option value="">select priority</option>
+            <option value="high">high</option>
+            <option value="moderate">moderate</option>
+            <option value="low">low</option>
+        </select>
+        <input type="submit" value="submit" id="sub">
+    </div>
+    <div id="sc2">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>item name</th>
+                    <th>quantity</th>
+                    <th>priority</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                
+            </tbody>
+        </table>
+        </div>
+   </div> 
+</body>
+</html>
+
+<script>
+    let arr=[
+        // {i_n:document.querySelector("#input_1").innerText,qty:querySelector("#input_2").innerText,pri:querySelector("#select_1").innerText},
+        // {i_n:"rajkumar",qty:"2",pri:'kadj'}
+    ]
+    document.querySelector("#sub").addEventListener("click",fun)
+    function fun(){
+        // arr.map(function(ele,index,arr){
+            let row=document.createElement("tr")
+            // let x= {i_n:document.querySelector("#input_1").innerText,qty:document.querySelector("#input_2").innerText,pri:document.querySelector("#select_1").innerText}
+            // arr.push(x)
+        let d1=document.createElement("td")
+        d1.innerText=document.querySelector("#input_1").value
+        let d2=document.createElement("td")
+        d2.innerText=document.querySelector("#input_2").value
+        let d3=document.createElement("td")
+        d3.innerText=document.querySelector("#select_1").value
+        row.append(d1,d2,d3)
+        document.querySelector("#tbody").append(row)
+        // })
+       
+    }
+</script>

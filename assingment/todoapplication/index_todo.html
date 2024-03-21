@@ -4,13 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="index_todo.css">
+    <style>
+        #container{
+            height: 600px;
+            width: 90%;
+            margin: auto;
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+        }
+        #container>div{
+            border: 1px solid black;
+            height: 100%;
+            /* width: 45%; */
+            /* display: flex; */
+            
+            
+        }
+        #s_container1{
+            width: 20%;
+        }
+        
+        input{
+            display: block;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            width: 95%;
+            
+        }
+        #s_container2{
+            width: 70%;
+            display: flex;
+            
+
+        }
+        #s_container2>div{
+            height: 100%;
+            width: 33%;
+            border: 1px solid black;
+        }
+        select{
+            width: 95%;
+        }
+        .res{
+            /* height: 10%;
+            width: 100%;
+            background-color: teal; */
+            text-align: center;
+            background-color: teal;
+            color: white;
+            height: 40px;
+        }
+        .j_n,.qty,.pri{
+            text-align: center;
+        }
+        
+    </style>
+    
 </head>
 <body>
-    <div id="container">
-        <div id="sub-container"</div>
+  <div id="container">
+    <div id="s_container1">
+
+    </div>
+    <div id="s_container2">
+    <div>
+        <div class="res">
+            job_name
+        </div>
+        <div class="j_n">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+    <div>
+        <div class="res">
+            quantity
+        </div>
+        <div class="qty">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+    <div>
+        <div class="res">
+           priority
+        </div>
+        <div class="pri">
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+    </div>
+    </div>
+  </div>
 </body>
 </html>
-<scrip src="index_todo.js">
+<script>
+   let forms=document.createElement("form")
+   document.querySelector("#s_container1").append(forms)
+   let input_1=document.createElement("input")
+   input_1.setAttribute("class","job")
+   input_1.setAttribute("placeholder","enter job_name")
+   let input_2=document.createElement("input")
+   input_2.setAttribute("class","num")
+   input_2.setAttribute("placeholder","enter quantity")
+   let select_1=document.createElement("select")
+   select_1.setAttribute("class","chose")
+   let option_1=document.createElement("option")
+   option_1.innerText="select priority"
+   let option_2=document.createElement("option")
+   option_2.innerText="high"
+   option_2.setAttribute("value","high")
+   let option_3=document.createElement("option")
+   option_3.innerText="moderate"
+   option_3.setAttribute("value","moderate")
+   let option_4=document.createElement("option")
+   option_4.innerText="low"
+   option_4.setAttribute("value","low")
+   select_1.append(option_1,option_2,option_3.option_4)
+   let input_3=document.createElement("input")
+   input_3.setAttribute("type","submit")
+   input_3.setAttribute("value","submit")
+   input_3.setAttribute("class","sub")
+   forms.append(input_1,input_2,input_3,select_1)
+   forms.addEventListener("submit",fun)
+   let arr=[
+        
+        ]
+   function fun(){
+    event.preventDefault()
+   
+    console.log((event.target));
+    // document.querySelector(".j_n").innerText=input_1.value
+    // document.querySelector(".qty").innerText=input_2.value
+    // document.querySelector(".pri").innerText=select_1.value
+    // let arr=[]
+    let obj={`          
+          "jin":input_1.value,
+          "qin":input_2.value,
+          "pin":select_1.value
+    }
+    arr.push(obj)
+    arr.map(function(ele,i,array){
+        document.querySelectorAll(".j_n>p")[i].innerText=ele.jin
+        document.querySelectorAll(".qty>p")[i].innerText=ele.qin
+        document.querySelectorAll(".pri>p")[i].innerText=ele.pin
+    })
+    console.log(arr);
 
-</script>
+   }
+
+
+
+ 
+
+   
+</script> 

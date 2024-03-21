@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="gender">
+        <option value="male">male</option>
+        <option value="female">female</option>
+
+    </select>
+    <input type="number" id="year" placeholder="enter your year of birth">
+    <button>submit</button>
+</body>
+</html>
+<script>
+    document.querySelector("button").addEventListener("click",fun)
+    let h=document.createElement("h5")
+    
+   function fun(){
+    act_age=document.querySelector("#year").value
+    
+    let age=2024-act_age
+    if(age>=21){
+        
+        h.innerText="you are eligible for marraige"
+        document.querySelector("body").append(h)
+    }else{
+        
+        h.innerText="you are not eligible for marraige"
+        document.querySelector("body").append(h)
+    }
+   }
+</script>

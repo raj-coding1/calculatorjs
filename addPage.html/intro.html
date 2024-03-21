@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#container{
+    display: flex;
+    justify-content: space-around;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <a href="home.html">
+            <p>home</p>
+        </a>
+       <a href="mens.html">
+        <p>mens</p>
+       </a>
+       <!-- <a href="womens.html"> -->
+        <p id="para" onclick="fun()">womens</p>
+       <!-- </a> -->
+       <a href="kids.html">
+        <p>kids</p>
+       </a>
+        
+    </div>
+</body>
+</html>
+<script>
+    function fun(){
+        document.querySelector("#para").style.color="red"
+    }
+</script>

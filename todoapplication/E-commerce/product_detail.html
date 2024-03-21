@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #container{
+        display: flex;
+        height: 400px;
+        width: 90%;
+        margin: auto;
+        /* border: 1px solid black; */
+        margin-top: 10%;
+    }
+    #container>div{
+        height: 100%;
+        width: 30%;
+        margin: auto;
+        /* border: 1px solid black;  */
+        border-style: inset;
+
+    }
+    img{
+        height: 75%;
+        width: 100%;
+
+    }
+    h5{
+        margin-top: 0;
+        padding-top: 0%;
+    }
+    #new{
+        display: flex;
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!-- <div id="sc1"></div>
+        <div id="sc2"></div>
+        <div id="sc3"></div> -->
+    </div>
+</body>
+</html>
+<script>
+    let arr=[
+        {"image":"https://rukminim2.flixcart.com/image/612/612/kzsqykw0/t-shirt/g/m/b/s-ausk0137-ausk-original-imagbqe7yf2qbmzu.jpeg?q=70","name":"yellow shirt ","save_price":"199","price":"1499"},
+        {"image":"https://rukminim2.flixcart.com/image/612/612/kziqvm80/t-shirt/r/l/a/xl-ausk0128-ausk-original-imagbgd7wvgj8yrh.jpeg?q=70","name":"blue shirt","save_price":"259","price":"1499"},
+        {"image":"https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/y/7/s/l-men-s-stylish-trendy-half-sleeve-digital-printed-latest-design-original-imagqz69mu8sryvh.jpeg?q=70","name":"check shirt","save_price":"189","price":"999"},
+
+    ]
+    arr.map(function(ele,index,arr){
+        let box=document.createElement("div")
+        let i=document.createElement("img")
+        i.src=ele.image
+        let h=document.createElement("h5")
+        h.innerText=ele.name
+        let box1=document.createElement("div")
+        box1.setAttribute("id","new")
+
+        let p=document.createElement("p")
+        p.innerText=ele.save_price
+        let p1=document.createElement("p")
+        p1.innerText=ele.price
+        
+        box1.append(p,p1)
+        box.append(i,h,box1)
+        document.querySelector("#container").append(box)
+
+    })
+</script>
