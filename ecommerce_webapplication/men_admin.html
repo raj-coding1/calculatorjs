@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter url" id="pic">
+    <input type="text" placeholder="enter name" id="name"> 
+    <input type="text" placeholder="enter price" id="price">
+    <button>
+        submit
+    </button>
+</body>
+</html>
+<script>
+    document.querySelector("button").addEventListener("click",myfun)
+    let arr
+    let a=localStorage.getItem("women")
+    arr=JSON.parse(a)||[]
+    function myfun(){
+        let obj={
+            image:document.querySelector("#pic").value,
+            name:document.querySelector("#name").value,
+            price:document.querySelector("#price").value
+        }
+        arr.push(obj)
+        localStorage.setItem("women",JSON.stringify(arr))
+    }
+</script>

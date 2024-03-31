@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="set user name" id="name">
+    <input type="text" placeholder="set strong password" id="pass">
+    <button>
+        submit
+    </button>
+</body>
+</html>
+<script>
+    document.querySelector("button").addEventListener("click",fun)
+    let arr
+    let x=localStorage.getItem("sign")
+    arr=JSON.parse(x)||[]
+    function fun(){
+      let obj={
+        "user":document.querySelector("#name").value,
+        "password":document.querySelector("#pass").value
+      }
+      arr.push(obj)
+      console.log(arr);
+      localStorage.setItem("sign",JSON.stringify(arr))
+      window.location.href="log_in.html"
+      
+    }
+</script>

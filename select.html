@@ -23,5 +23,8 @@
     function myfun(){
         document.querySelector("#submit").style.backgroundColor="red"
         document.querySelector("#heading").innerText=document.querySelector("#select").value
+        num="raj"
+        localStorage.setItem("name",num)
+        console.log(localStorage.getItem("name"));
     }
 </script>

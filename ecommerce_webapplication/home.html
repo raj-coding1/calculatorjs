@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 id="home">Home</h1>
+        <h1 id="gf">Women</h1>
+        <h1 id="bf">MEN</h1>
+        <h1 id="son">kids</h1>
+
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("#home").addEventListener("click",fun1)
+    document.querySelector("#gf").addEventListener("click",fun2)
+    document.querySelector("#bf").addEventListener("click",fun3)
+    document.querySelector("#son").addEventListener("click",fun4)
+    function fun1(){
+        window.location.href="home.html"
+    }
+    function fun2(){
+        window.location.href="women.html"
+    }
+    function fun3(){
+        window.location.href="men.html"
+    }
+    function fun4(){
+        window.location.href="kids.html"
+    }
+</script>
