@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,250px);
+            /* height: 100%; */
+        }
+        /* .raj{
+            /* display: flex; */
+        /* } */ */
+        img{
+            height: 200px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        
+    </div>
+</body>
+</html>
+<script>
+    let a=localStorage.getItem("men")
+    let arr=JSON.parse(a)
+    arr.map(function(ele,index,arr){
+       let box= document.createElement("div")
+       box.setAttribute("class","raj")
+       let image=document.createElement("img")
+       let num=document.createElement("h5")
+       let para=document.createElement("p")
+       image.src=ele.image
+       num.innerText=ele.name
+       para.innerText=ele.price
+       box.append(image,num,para)
+       document.querySelector("#container").append(box)
+    })
+</script>
