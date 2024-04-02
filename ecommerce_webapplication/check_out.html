@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container1{
+            display: flex;
+        }
+        #amount,#total{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!-- <div>
+            <h2>price details</h2>
+        </div>
+        <div id="amount">
+            <p>price</p>
+            <p>45</p>
+            
+        </div>
+        <div id="total">
+            <p>total amount</p>
+            <p>34</p>
+        </div> -->
+    </div>
+  
+</body>
+</html>
+<script>
+     let box3=document.createElement("div")
+        let box4=document.createElement("div")
+        box4.setAttribute("id","amount")
+        let box5=document.createElement("div")
+        box5.setAttribute("id","total")
+        let para1=document.createElement("p")
+        let para2=document.createElement("p")
+        para2.setAttribute("class","price")
+        let para3=document.createElement("p")
+        let para4=document.createElement("p")
+        para4.setAttribute("class","total")
+        let h=document.createElement("h2")
+        para1.innerText="price"
+        para3.innerText="total price"
+        h.innerText="price details"
+    
+    let x=localStorage.getItem("raj")
+    let arr=JSON.parse(x)
+    function remove_element(){
+        let m=ele
+        console.log(m);
+        arr.splice(m,1)
+        console.log(arr);
+       }
+    // let arr=[1]
+    arr.map(function(ele,index,arr){
+        console.log("i am inside fun");
+        let box=document.createElement("div")
+        let box1=document.createElement("div")
+        let box2=document.createElement("div")
+        let image=document.createElement("img")
+        let num=document.createElement("h5")
+        let para=document.createElement("p")
+        let btn=document.createElement("button")
+        btn.innerText="remove"
+        btn.addEventListener("click",remove_element)
+     
+       box2.append(btn)
+
+        image.src=ele.image
+        num.innerText=ele.name
+        para.innerText=ele.price
+        box1.append(image)
+        box2.append(num,para)
+        box.append(box1,box2)
+        document.querySelector("#container").append(box)
+        
+    })
+   let total= arr.reduce(function(sum,ele,index,arr){
+        //   console.log(sum);
+        console.log(ele.price);
+            return sum+ele.price
+       
+        },0)
+        console.log(total);
+        // para2.innerText=a
+        //     para4.innerText=a
+        
+        box3.append(h)
+        box4.append(para1,para2)
+        box5.append(para3,para4)
+document.querySelector("#container").append(box3,box4,box5)
+// let a=[1,2,3,4]
+// let p=a.splice(1)
+// console.log(p);
+   
+</script>

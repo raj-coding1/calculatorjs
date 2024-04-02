@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            border: 1px solid black;
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(2,200px);
+            gap: 20px
+            /* height: 100%; */
+        }
+         /* .raj{
+            /* display: flex; */
+            /* height: ; */
+         /* }  */ */
+         #container>div{
+            border: 1px solid black;
+         }
+         .raj{
+            display: flex;
+            justify-content: space-between;
+         }
+        img{
+            /* height: 200px; */
+            height: 150px;
+            width: 100%;
+        }
+        p{
+            margin-top: 0;
+        }
+        h5{
+            /* /* margin-top: 0;
+            
+            margin-bottom: 0%;
+            padding: 0%; */
+            margin: 0%;
+        } 
+        #cart{
+            border: 0;
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        
+    </div>
+    <center>
+        <button id="total">go to cart</button>
+    </center>
+
+</body>
+</html>
+<script>
+    let x=localStorage.getItem("raj")
+    let completed=JSON.parse(x)||[]
+    // console.log(completed);
+    // console.log(typrof(completed));
+    // let completed=[]
+    let a=localStorage.getItem("men")
+    let arr=JSON.parse(a)||[]
+    arr.map(function(ele,index,arr){
+       let box= document.createElement("div")
+       let box1= document.createElement("div")
+       let box2= document.createElement("div")
+       let box3= document.createElement("div")
+       box2.setAttribute("class","raj")
+       let image=document.createElement("img")
+       let num=document.createElement("h5")
+       let para=document.createElement("p")
+       let cart=document.createElement("button")
+       cart.setAttribute("id","cart")
+       cart.innerText="Add to Cart"
+
+       image.src=ele.image
+       num.innerText=ele.name
+       para.innerText=ele.price
+    //    array.push(ele)
+       box1.append(image)
+       box2.append(para,cart)
+       box3.append(num)
+
+       box.append(box1,box2,box3)
+    //    console.log(ele);
+    // let array
+       document.querySelector("#container").append(box)
+       cart.addEventListener("click",add)
+       
+       function add(){
+        completed.push(ele)
+        localStorage.setItem("raj",JSON.stringify(completed))
+        console.log(completed);
+        // window.location.href="check_out.html"
+    }
+    })
+  
+</script>
